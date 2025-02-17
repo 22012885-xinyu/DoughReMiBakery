@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dough Re Mi Bakery - Home</title>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<script src="/bootstrap/css/bootstrap.js"></script>
+<style>
+.rounded-button {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: #5c483d;
+	color: white;
+	margin-left: 110px;
+}
+
+.card {
+	max-width: 250px;
+	text-align: center;
+	font-family: Verdana;
+}
+</style>
+</head>
+<body style="background-color: #9F8170; font-family: Verdana;">
+	<div class="container">
+		<div th:replace="fragments/header"></div>
+	</div>
+	<div class="container">
+		<main>
+			<br />
+			<div class="card" style="margin-top: 10px">
+				<img src="img/bf.jpeg" alt="Blackforest Cake"> <br /> <br />
+				<h5>Blackforest Cake</h5>
+				<p style="color: #6b6b6b">Rich chocolate cake with fresh
+					cherries upon every bite.</p>
+				<a href="/BlackforestCake" target="_self">
+					<button class="rounded-button">Add to Cart</button>
+				</a> <br />
+			</div>
+			<br />
+			<div class="card" style="margin-top: -480px; margin-left: 350px;">
+				<img src="img/fruit.jpg" alt="Fruit Cake"> <br /> <br />
+				<h5>Fruit Cake</h5>
+				<p style="color: #6b6b6b">Fresh fruits layered in dense
+					spongecake.</p>
+				<a href="/FruitCake" target="_self">
+					<button class="rounded-button">Add to Cart</button>
+				</a> <br />
+			</div>
+			<br />
+			<div class="card" style="margin-top: -480px; margin-left: 700px;">
+				<img src="img/lr.jpeg" alt="Lychee Rose Cake"> <br /> <br />
+				<h5>Lychee Rose Cake</h5>
+				<p style="color: #6b6b6b">Lychee flavoured cake with a hint of
+					rose.</p>
+				<a href="/LycheeRoseCake" target="_self">
+					<button class="rounded-button">Add to Cart</button>
+				</a> <br />
+			</div>
+			<br />
+			<div class="card" style="margin-top: -480px; margin-left: 1045px;">
+				<img src="img/rb.png" alt="Rainbow Cake"> <br /> <br />
+				<h5>Rainbow Cake</h5>
+				<p style="color: #6b6b6b">Layers of spongecake with cream cheese
+					in between.</p>
+				<a href="/RainbowCake" target="_self">
+					<button class="rounded-button">Add to Cart</button>
+				</a> <br />
+			</div>
+			<br />
+			<div class="card" style="margin-top: 50px;">
+				<img src="img/rv.png" alt="Red Velvet Cake"> <br /> <br />
+				<h5>Red Velvet Cake</h5>
+				<p style="color: #6b6b6b">Vanilla and chocolate cake with cream
+					cheese.</p>
+				<a href="/RedVelvetCake" target="_self">
+					<button class="rounded-button">Add to Cart</button>
+				</a> <br />
+			</div>
+		</main>
+	</div>
+	<br />
+	<div class="container">
+		<div th:replace="fragments/home"></div>
+	</div>
+</body>
+</html>

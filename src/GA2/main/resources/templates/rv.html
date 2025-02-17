@@ -1,0 +1,155 @@
+<!-- I declare that this code was written by me, txy81. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Student Name: tay xin yu
+Student ID: 22012885
+Class: C372-4D-E63C-A
+Date created: 2023-Oct-26 12:18:22 pm 
+ -->
+<!DOCTYPE html>
+<html>
+<head>
+<title>Red Velvet Cake</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<script src="/bootstrap/js/bootstrap.js"></script>
+
+<style>
+/*main format*/
+.container {
+	position: relative;
+	width: 100%;
+}
+
+/* Select size & Candle(s) format*/
+.size {
+	margin-left: 600px;
+	margin-top: 50px;
+	font-size: 25px;
+}
+
+/*radio buttons*/
+.radio {
+	margin-left: 700px;
+	font-size: 20px;
+}
+
+.radio-inline {
+	margin-left: 20px;
+}
+/* END of radio buttons*/
+
+/*quantity buttons*/
+.quantity {
+	margin-left: 700px;
+	font-size: 20px;
+	margin-top: 20px;
+}
+
+.label1 {
+	margin-left: 35px;
+}
+
+.label2 {
+	margin-left: 10px;
+}
+/* END of quantity buttons*/
+
+/*image*/
+.image {
+	display: block;
+	margin-top: -300px;
+	height: 230px;
+	width: 230px;
+}
+
+.name {
+	font-size: 25px;
+	margin-left: 15px;
+	/*text-align: center;*/
+}
+/* END of image*/
+
+/* Add to cart button*/
+.rounded-button {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: #5c483d;
+	color: white;
+	float: right;
+	margin-top: 120px;
+}
+
+.back {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: #5c483d;
+	color: white;
+	float: left;
+	margin-top: 120px;
+}
+
+.buttons {
+	margin-top: 50px;
+}
+
+/* END of cart*/
+</style>
+</head>
+<body style="background-color: #9F8170; font-family: Verdana;">
+	<div class="container">
+		<div th:replace="fragments/without"></div>
+	</div>
+	<br />
+	<div>
+		<div class="maincontent">
+
+			<br />
+		</div>
+
+		<div class="container">
+			<p class="size">Select size</p>
+			<form class="radio">
+				<label class="radio-inline"> <input type="radio"
+					name="optradio" checked> Slice
+				</label> <label class="radio-inline"> <input type="radio"
+					name="optradio"> 18cm (4 to 6 pax)
+				</label> <label class="radio-inline"> <input type="radio"
+					name="optradio"> 22cm (5 to 7 pax)
+				</label>
+			</form>
+
+			<p class="size">Candle(s)</p>
+			<form class="quantity" action="/cart" method="post">
+				<label for="quantity1">Big candles:</label> <input class="label1"
+					type="number" id="quantity" name="quantity" min="1" value="1">
+			</form>
+			<form class="quantity" action="/cart" method="post">
+				<label for="quantity">Small candles:</label> <input class="label2"
+					type="number" id="quantity" name="quantity" min="1" value="1">
+			</form>
+
+
+
+			<img class="image" src="img/rv.png ">
+
+			<p class="name">Red Velvet Cake</p>
+
+
+			<a href="/home" target="_self">
+				<button class="back">Back</button>
+			</a> <a href="/cart" target="_self">
+				<button class="rounded-button">Add to Cart</button>
+			</a>
+		</div>
+	</div>
+	<div class="container">
+		<div th:replace="fragments/footer"></div>
+	</div>
+</body>
+</html>

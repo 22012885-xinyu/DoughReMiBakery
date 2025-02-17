@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dough Re Mi Bakery - Register</title>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<script src="/bootstrap/css/bootstrap.js"></script>
+<style>
+.rounded-button {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: #5c483d;
+	color: white;
+	margin-left: 1100px;
+	margin-top:200px;
+	
+}
+
+</style>
+</head>
+<body style="background-color: #9F8170; font-family: Verdana;">
+	<br />
+	<div class="container">
+		<div th:replace="fragments/without"></div>
+	</div>
+	<br />
+	<div class="container" style="margin-left: 260px;">
+	 <input type="text" placeholder="First Name" name="fname" id="fname" required size="58" style="border-radius:15px; border:none; height: 40px;">
+	 <input type="text" placeholder="Last Name" name="lname" id="lname" required size="58" style="border-radius:15px; border:none; height: 40px;">
+	<br/>
+	<br/>
+	 <input type="text" placeholder="Birthday" name="bday" id="bday" required size="58" style="border-radius:15px; border:none; height: 40px;">
+	<select id="input_gender" name="gender" class="form-control" style="border-radius: 15px; border: none; height: 40px; width: 580px; margin-top: -40px; margin-left: 580px;">
+    	<option value="" disabled selected hidden style="background-color: #757575;">Gender</option>
+    	<option value="Male">Male</option>
+    	<option value="Female">Female</option>
+    	<option value="Prefernottosay">Prefer not to say</option>
+	</select>
+
+	<br/>
+ 	<input type="text" placeholder="Email" name="email" id="email" required size="58" style="border-radius:15px; border:none; height: 40px;">
+ 	<input type="text" placeholder="Phone Number" name="number" id="number" required size="58" style="border-radius:15px; border:none; height: 40px;">
+	<br/>
+	<br/>
+    <input type="password" placeholder="Password" name="psw" id="pwd" required size="58" style="border-radius:15px; border:none; height: 40px;">
+    <input type="password" placeholder="Repeat Password" name="pwd-repeat" id="pwd-repeat" required size="58" style="border-radius:15px; border:none; height: 40px;">
+	<br/>
+	<br/>
+	<input type="text" placeholder="Postal code" name="postal" id="postal" required size="58" style="border-radius:15px; border:none; height: 40px;">
+	<input type="text" placeholder="Unit Number" name="unit" id="unit" required size="58" style="border-radius:15px; border:none; height: 40px;">
+	<a href="/login" target="_self">
+	<button class="rounded-button" onclick="myFunction()">Register</button>
+	</a>
+  </div>
+  	<div th:replace="fragments/footer"></div>
+  	<script>
+	function myFunction(){
+		var url = "/login";
+		window.location.href = url;
+		alert("Account has been registered sucessfully!");
+		}
+	</script>
+</body>
+</html>

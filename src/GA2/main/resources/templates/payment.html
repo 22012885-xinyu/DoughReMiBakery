@@ -1,0 +1,91 @@
+<!--I declare that this code was written by me. 
+I will not copy or allow others to copy my code. 
+I understand that copying code is considered as plagiarism.
+
+Some codes were done with references of w3school.com'
+
+Student Name: Tay Xin Yu
+Student ID:22012885
+Class: C372-4D-E63C-A
+Date/Time Last modified: 2 November 2023 14:00
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<title>Dough Re Mi Bakery</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<script src="/bootstrap/js/bootstrap.js"></script>
+
+<style>
+/*main format*/
+.container {
+	position: relative;
+	width: 100%;
+}
+
+/* icon for the payment*/
+.icon-container {
+	margin-bottom: 20px;
+	padding: 7px 0;
+	font-size: 24px;
+}
+.rounded-button {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: #5c483d;
+	color: white;
+	margin-left: 460px;
+	
+}
+</style>
+</head>
+
+
+<body style="background-color: #9F8170; font-family: Verdana;">
+	<br />
+	<div class="container">
+		<div th:replace="fragments/without"></div>
+	</div>
+	<br/>
+	<div class="container" style="margin-left: 905px;">
+			<p>Card details 
+			<img src="/img/visa.png" alt="Visa" style="width:90px; height:50px; margin-left:200px;" >
+			<img src="/img/master.png" alt="Master Card" style="width:80px; height: 50px;">
+			<img src="/img/amex.png" alt="American Express" style="height:50px;">
+			</p>
+			<br /> 
+			<input id="number" type="text" placeholder="Card Number" size="58" style="border-radius:15px; border:none; height: 40px;" ></input>
+			<br /> 
+			<br />
+			<input id="date" type="text" placeholder="Expiry Date(MM/YY)" size="30" style="border-radius:15px; border:none; height: 40px;"></input>
+			<input id="ccv" type="text" placeholder="CCV" size="10" style="border-radius:15px; border:none; height: 40px; margin-left:138px"></input>
+			<br/>
+			<br /> 
+			<input id="name" type="text" placeholder="Name on Card" size="58" style="border-radius:15px; border:none; height: 40px;"></input>
+			<br />
+			<br/>
+			<p>Billing Address</p>
+			<input id="address" type="text" placeholder="Address" size="58" style="border-radius:15px; border:none; height: 40px;"></input> 
+			<br />
+			<br />
+			<input id="postal" type="text" placeholder="Postal Code" size="58" style="border-radius:15px; border:none; height: 40px;"></input>
+			</br>
+			</br>
+			<button class="rounded-button" onclick="myFunction()">Add Card</button>
+	</div>
+	<div th:replace="fragments/footer"></div> 
+	<script>
+	function myFunction(){
+		var url = "/home";
+		window.location.href = url;
+		alert("Card has been added sucessfully!");
+		}
+	</script>
+</body>
+
+</html>

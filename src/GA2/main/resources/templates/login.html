@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Dough Re Mi Bakery - Log In</title>
+<link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
+<script src="/bootstrap/css/bootstrap.js"></script>
+<style>
+
+
+.rounded-button {
+	width: 120px;
+	height: 40px;
+	border-radius: 10px;
+	border: none;
+	background-color: #5c483d;
+	color: white;
+	margin-left: 460px;
+	margin-top: 100px;
+}
+</style>
+</head>
+<body style="background-color: #9F8170; font-family: Verdana;">
+	<br />
+	<div class="container">
+		<div th:replace="fragments/without"></div>
+	</div>
+	<br />
+	<div class="container">
+
+		<input type="text" placeholder="Phone Number" name="number"
+			id="number" required size="58"
+			style="border-radius: 15px; border: none; height: 40px; margin-left: 720px;">
+		<br /> <br /> <input type="password" placeholder="Password"
+			name="psw" id="pwd" required size="58"
+			style="border-radius: 15px; border: none; height: 40px; margin-left: 720px;">
+		<p style="margin-top: 30px;">
+			<a href="/reset" target="_self"
+				style="color: black; margin-left: 1150px;">Forget Password</a>
+		</p>
+		<a href="/home" target="_self">
+			<button class="rounded-button" onclick="myFunction()"
+				style="font-size: 30px; padding: 0px 0px 50px 0px; margin-top: 150px; margin-left: 1150px;">&rarr;</button>
+		</a> <br /> <br />
+		<p style="color: black; margin-left: 845px; margin-top: 120px;">
+			Don't have an account yet? Register <a href="/register"
+				target="_self" style="color: white;">here</a>
+		</p>
+
+	</div>
+	<div th:replace="fragments/footer"></div>
+	<script>
+		function myFunction() {
+			var url = "/home";
+			window.location.href = url;
+			alert("Log in sucessfully!");
+		}
+	</script>
+</body>
+</html>
